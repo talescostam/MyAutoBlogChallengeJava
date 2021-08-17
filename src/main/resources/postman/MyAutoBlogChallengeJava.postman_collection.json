@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "6c08c486-873e-42b5-8b47-21f5f6aa3a2b",
+		"name": "MyAutoBlogChallengeJava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastro de usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Challenge\",\r\n    \"email\": \"teste@imusica.com.br\",\r\n    \"password\": \"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autentica usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"teste@imusica.com.br\",\r\n    \"password\": \"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/signIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar usuário logado",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBpbXVzaWNhLmNvbS5iciIsImlhdCI6MTYyOTI0MDA4MywiZXhwIjoxNjI5Mjc2MDgzfQ.Pl6T2hP3DOkaENMA0hgGkKenpDv0pVnEtZ5Y6Wtpnv",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/users/logged",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"logged"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBpbXVzaWNhLmNvbS5iciIsImlhdCI6MTYyOTIzOTk5MiwiZXhwIjoxNjI5Mjc1OTkyfQ.QHzPi5nSvSwZLdZ2PzF0mMgea222yMZ6LRCqs0KhFwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"title\",\r\n    \"text\": \"text\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBpbXVzaWNhLmNvbS5iciIsImlhdCI6MTYyOTI0MDA4MywiZXhwIjoxNjI5Mjc2MDgzfQ.Pl6T2hP3DOkaENMA0hgGkKenpDv0pVnEtZ5Y6Wtpnvc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"title\",\r\n    \"text\": \"text\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBpbXVzaWNhLmNvbS5iciIsImlhdCI6MTYyOTIzOTk5MiwiZXhwIjoxNjI5Mjc1OTkyfQ.QHzPi5nSvSwZLdZ2PzF0mMgea222yMZ6LRCqs0KhFwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"title\",\r\n    \"text\": \"text\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBpbXVzaWNhLmNvbS5iciIsImlhdCI6MTYyOTIzOTk5MiwiZXhwIjoxNjI5Mjc1OTkyfQ.QHzPi5nSvSwZLdZ2PzF0mMgea222yMZ6LRCqs0KhFwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"title\",\r\n    \"text\": \"text\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBpbXVzaWNhLmNvbS5iciIsImlhdCI6MTYyOTIzOTk5MiwiZXhwIjoxNjI5Mjc1OTkyfQ.QHzPi5nSvSwZLdZ2PzF0mMgea222yMZ6LRCqs0KhFwo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "JWT",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBpbXVzaWNhLmNvbS5iciIsImlhdCI6MTYyOTIzOTQ4OSwiZXhwIjoxNjI5Mjc1NDg5fQ.gyjbpYx9StKg1ZBOqWAvucBVvzIOFf2LPNMOpW67Mrg"
+		}
+	]
+}
