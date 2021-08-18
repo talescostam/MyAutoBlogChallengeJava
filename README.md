@@ -16,16 +16,16 @@ Neste desafio serão avaliados os conhecimentos do candidato no campo do desenvo
 - JWT;
 - Conexão e manipulação de banco de dados com Spring Data JPA.
 
-O objetivo desta tarefa é a manutenção de um sistema que armazena usuários e suas respectivas postagens, para tal, serão requeridas tarefas em uma api RESTful em Spring Boot. A persistência dos dados é feita uma base H2 em memória integrada na própria aplicação. 
+O objetivo desta tarefa é a manutenção de um sistema que armazena usuários e suas respectivas postagens, para tal, serão requeridas tarefas em uma api RESTful em Spring Boot. A persistência dos dados é feita com uma base H2 em memória integrada na própria aplicação. 
 
 A seguir serão descritos os requisitos do sistema proposto.
 
 ### Requisitos
 
 Usuários:
-Os requisitos desse módulo estão implementados, porém ainda é necessário corrigir um bug relaciona a validação do email durante o cadastro. O que ocorre é que sempre que um novo usuário tenta se registrar, o sistema impede o cadastro dizendo que o email já está sendo usado mesmo não sendo o caso.
+Os requisitos desse módulo estão implementados, porém ainda é necessário corrigir um bug relacionado à validação do email durante o cadastro. Ocorre que quando um novo usuário tenta se registrar, o sistema impede o cadastro dizendo que o email já está sendo usado mesmo não sendo o caso.
 
-- A comunicação entre as requisições da aplicação devem ser realizadas utilizando-se o formato JSON e Multipart-form-data.
+- A comunicação entre as requisições da aplicação devem ser realizadas utilizando-se o formato JSON.
 - Usuário deve ser capaz de cadastrar-se no sistema provendo as informações básicas de nome, email e senha. Não deve ser possível a existência de dois usuários de ids diferentes com o mesmo endereço de email.
 - Usuário deve ser capaz de logar-se no sistema fornecendo email e senha.
   - Resposta da api deve conter um token JWT que será utilizado para acesso a rotas privadas.
