@@ -16,9 +16,9 @@ public class EmailNotRegisteredValidator implements ConstraintValidator<EmailNot
 	public boolean isValid(String value, ConstraintValidatorContext context) {
 
 		if (repository.existsByEmail(value)) {
-			return true;	
+			return false;
 		}
-		return false;
+		return true;
 
 	}
 }
